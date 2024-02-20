@@ -1,1 +1,5 @@
 # ARX-nonlinear
+
+A dataset measured from a dynamic system with an input and an output is provided. The system's order is no more than 3, and its dynamics may be nonlinear, while the output may be affected by noise. We will develop a black-box model for this system using a nonlinear polynomial ARX structure. A second dataset, measured from the same system, is provided for validating the developed model. Program a function that generates a nonlinear polynomial ARX model for orders na, nb, and delays nk, with a configurable degree m. Also, program the regression procedure for identifying the parameters and using the model with new inputs. Note that such usage must be possible in two ways:
+Prediction (one-step ahead), which uses the actual output values of the system's past outputs. For example, in step k, equation would be applied using the variables y(k-1) and u(k) on the right side of the equation.
+Simulation, where the system's previous outputs are not available, and therefore the model's previous outputs cannot be used either; in the example, y(k-1) would be replaced with the simulated previous value y(k-1) on the right side of equation.
